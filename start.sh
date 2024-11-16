@@ -1,6 +1,6 @@
 #!/bin/sh
 # Define a unique worker name for each miner (set this differently on each machine)
-WORKER_NAME="Nova3i-003"  # Change this for each miner
+WORKER_NAME="VivoY83-001"  # Change this for each miner
 
 # Download the config file from GitHub
 curl -o ~/ccminer/onlineconfig.json https://raw.githubusercontent.com/saijame-art/miner/refs/heads/main/onlineconfig.json
