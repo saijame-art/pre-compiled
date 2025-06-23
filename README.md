@@ -44,6 +44,11 @@ nano config.json
 CTRL + c
 ```
 # Tips & Tricks:
+for automine when open termux app, please use this: nano ~/.bashrc
+
+in the text editor add this word line: cd ccminer && ./start.sh
+
+exit and terminate the termux app (or) close the app and open again the miner will run automatically. thank!
 - If Termux can't complete update & upgrade please clear app cache and data.
 - Disable battery manager, battery optimization for Termux app.
 - If you have a "protect battery" option to stop charge at 85% or similar enable it to help preserve battery health.
