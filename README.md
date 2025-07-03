@@ -14,6 +14,10 @@ https://github.com/termux/termux-app/releases/download/v0.118.0/termux-app_v0.11
 ```
 2. Get Termux ready:
 - Type `y` then enter key in any prompts!
+- prevent from slepping CPU
+```
+termux-wake-lock
+```
 ```
 yes | pkg update -y
 yes | pkg upgrade -y
@@ -32,9 +36,9 @@ chmod +x ccminer start.sh
 1. Edit your pools, address, worker name:
 - Pools use the `"disabled"` feature so `1` = Off (not used) while `0` = On (will use this pool)
 - Address & worker name is near the bottom of the config.json in format `address here.worker name here`
-- Optionally can use ccminer api for monitoring
+- Optionally can use ccminer api for monitoring 
 ```
-nano config.json
+nano start.sh 
 ```
 2. Start ccminer with:
 ```
@@ -44,12 +48,15 @@ nano config.json
 ```
 CTRL + c
 ```
+4.for automine when open termux app:
+```
+nano ~/.bashrc
+```
+5. in the text editor add this word line:
+```
+cd ccminer && ./start.sh
+```
 # Tips & Tricks:
-for automine when open termux app, please use this: nano ~/.bashrc
-
-in the text editor add this word line: cd ccminer && ./start.sh
-
-exit and terminate the termux app (or) close the app and open again the miner will run automatically. thank!
 - If Termux can't complete update & upgrade please clear app cache and data.
 - Disable battery manager, battery optimization for Termux app.
 - If you have a "protect battery" option to stop charge at 85% or similar enable it to help preserve battery health.
