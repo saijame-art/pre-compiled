@@ -1,7 +1,8 @@
 #!/bin/sh
 # Define a unique worker name for each miner (set this differently on each machine)
 WORKER_NAME="A83-003"  # Change this for each miner
-
+#remove old_onlineconfig.json file first and download a new one.
+rm -rf ~/ccminer/onlineconfig.json
 # Download the config file from GitHub
 curl -o ~/ccminer/onlineconfig.json https://raw.githubusercontent.com/saijame-art/miner/refs/heads/main/onlineconfig.json
 
